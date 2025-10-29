@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-fastapi-deployment
+  labels:
+    app: ml-fastapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ml-fastapi
+  template:
+    metadata:
+      labels:
+        app: ml-fastapi
+    spec:
+      containers:
+        - name: ml-fastapi
+          image: ml-fastapi:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
