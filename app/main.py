@@ -6,7 +6,7 @@ import joblib
 import numpy as np
 print("Checking if argocd working")
 # ✅ Initialize FastAPI
-app = FastAPI(title="ML Inference API")
+app = FastAPI(title="ML Inference API 2")
 
 # ✅ Load trained model
 model = joblib.load("app/model.pkl")
