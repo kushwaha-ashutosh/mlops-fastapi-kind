@@ -30,8 +30,9 @@ jobs:
     - name: Push Docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/ml-fastapi:${{ github.sha }}
 
+    # 💤 Temporarily disabling direct kubectl deploy
     # 5️⃣ Update image in Kubernetes deployment (optional for remote clusters)
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl set image deployment/ml-fastapi-deployment \
-        ml-fastapi=${{ secrets.DOCKER_USERNAME }}/ml-fastapi:${{ github.sha }}
+    #- name: Deploy to Kubernetes
+    # run: |
+    #   kubectl set image deployment/ml-fastapi-deployment \
+    #   ml-fastapi=${{ secrets.DOCKER_USERNAME }}/ml-fastapi:${{ github.sha }}
