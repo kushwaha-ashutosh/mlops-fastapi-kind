@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
 import numpy as np
-
+print("Checking if argocd working")
 # ✅ Initialize FastAPI
 app = FastAPI(title="ML Inference API")
 
