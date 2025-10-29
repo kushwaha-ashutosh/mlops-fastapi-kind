@@ -31,3 +31,4 @@ def predict(data: StudentData):
         "prediction": result
     }
 '''i am testing some changes lets see if they are reflected on the github actions'''
+'''Again testing changes to see if argoCD gets triggered'''
