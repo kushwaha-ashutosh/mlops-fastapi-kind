@@ -30,3 +30,4 @@ def predict(data: StudentData):
         "sleep_hours": data.sleep_hours,
         "prediction": result
     }
+'''i am testing some changes lets see if they are reflected on the github actions'''
